@@ -1,0 +1,255 @@
+.auth-modal {
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.auth-modal form label:not(.patient-checkbox) {
+  display: block;
+  margin: 12px 0 6px;
+  color: #596355;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.auth-modal form > input,
+.password-field > input,
+.patient-fields input,
+.patient-create-form input {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px;
+  border: 1px solid #e7e8df;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 12px;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.password-field {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.password-field > input {
+  padding-right: 44px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  transform: translateY(-50%);
+  place-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #788477;
+}
+
+.password-toggle:hover {
+  background: #f0f3ed;
+  color: #4f6c59;
+}
+
+.auth-gate {
+  display: grid;
+  min-height: calc(100vh - 74px);
+  grid-template-columns: minmax(0, 440px);
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  padding: 38px 24px 60px;
+  background: radial-gradient(ellipse at 18% 18%, #edf2e8 0, transparent 42%), radial-gradient(ellipse at 84% 90%, #f6ebe4 0, transparent 40%), #f8f6f1;
+}
+
+.auth-gate-card {
+  width: 100%;
+  max-width: 440px;
+  margin: 0;
+  padding: 32px;
+  border: 1px solid #eeece6;
+  border-radius: 21px;
+  background: #fffefa;
+  box-shadow: 0 12px 36px #45553d10;
+  text-align: left;
+}
+
+.auth-gate-card .login-panel-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-gate-card .login-panel-heading h2 {
+  margin: 0;
+  color: #303a34;
+  font: 700 22px var(--serif);
+  letter-spacing: -.5px;
+}
+
+.auth-gate-card .login-panel-heading p {
+  margin: 5px 0 0;
+  color: #81867e;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.auth-gate-card form label:not(.patient-checkbox) {
+  margin-top: 0;
+}
+
+.auth-gate-card form > input + label {
+  margin-top: 15px;
+}
+
+.auth-gate-card .patient-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 10px;
+  color: #596355;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.patient-checkbox input {
+  width: 16px;
+  height: 16px;
+  accent-color: #5e7d65;
+}
+
+.patient-fields {
+  padding: 10px 12px 12px;
+  border-radius: 12px;
+  background: #f7f8f3;
+}
+
+.patient-fields label {
+  margin-top: 8px !important;
+}
+
+.patient-create-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.patient-create-form input {
+  font-size: 11px;
+}
+
+.patient-create-form .password-field {
+  grid-column: span 2;
+}
+
+.patient-create-form .password-field > input {
+  font-size: 11px;
+}
+
+.patient-create-form input:nth-child(3),
+.patient-create-form input:nth-child(4),
+.patient-create-form button,
+.patient-create-form .pin-error {
+  grid-column: span 2;
+}
+
+.patient-create-form button {
+  justify-self: start;
+}
+
+.auth-submit {
+  margin-top: 18px;
+}
+
+.auth-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 17px;
+  margin-top: 15px;
+}
+
+.auth-links button {
+  padding: 4px;
+  border: 0;
+  background: transparent;
+  color: #5e7d65;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.patient-account-panel {
+  margin-bottom: 17px;
+}
+
+.patient-form-note {
+  margin: -7px 0 13px;
+  color: #858a82;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.linked-patient {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.linked-patient > .contact-initial {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+}
+
+.linked-patient > div {
+  display: grid;
+  gap: 3px;
+}
+
+.linked-patient .eyebrow {
+  margin: 0;
+}
+
+.linked-patient strong {
+  color: #425044;
+  font: 700 14px var(--serif);
+}
+
+.linked-patient small {
+  color: #858a82;
+  font-size: 10px;
+}
+
+@media (max-width: 760px) {
+  .auth-gate {
+    min-height: calc(100dvh - 62px);
+    padding: 24px 19px 35px;
+  }
+
+  .auth-gate-card {
+    padding: 25px 20px;
+  }
+
+  .auth-modal {
+    max-height: 90dvh;
+  }
+
+  .patient-create-form {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-create-form input:nth-child(3),
+  .patient-create-form input:nth-child(4),
+  .patient-create-form .password-field,
+  .patient-create-form button,
+  .patient-create-form .pin-error {
+    grid-column: span 1;
+  }
+}
